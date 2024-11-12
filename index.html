@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Links Favoritos</title>
     <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
         body {
+          position: relative;
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
@@ -17,12 +22,75 @@
             background-color: #f3f3f3;
         }
 
+     header {
+       top: 0px;
+       position: relative;
+       padding: 10px;
+       margin-bottom: 20px;
+       height: 30%;
+       width: 90vw;
+       background: black;
+       color: white;
+     }
+     header img {
+       background: white;
+       color: black;
+       border-radius: 50%;
+     }
+      #profile {
+        
+        text-align: center;
+        
+      }
+      #profile div {
+        font-family: Segoe UI;
+        h2 {
+          
+        text-align: center;
+      }
+      }
         h1 {
             color: #333;
+            text-align: center;
         }
 
         .link-container {
+            text-align: center;
             width: 100%;
+            max-width: 500px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: #2980b9;
+            
+        }
+     
+@media (max-width: 768px) {
+  body{
+    padding: 15px;
+  }
+            .link-container {
+            width: 90%;
             max-width: 500px;
             padding: 20px;
             border-radius: 8px;
@@ -48,9 +116,17 @@
         a:hover {
             color: #2980b9;
         }
+        }
+        
     </style>
 </head>
 <body>
+  <header>
+    <div id="profile">
+      <img src="./Imagens/github.png" alt="profile" />
+    </div>
+    <h2 id="name">Gabrieel M Do Nascimento</h2>
+  </header>
     <h1>Meus Links Favoritos</h1>
     <div class="link-container">
         <ul>
@@ -61,5 +137,8 @@
             <li><a href="https://service-worker-up.netlify.app" target="_blank">domain</a></li>
         </ul>
     </div>
+    
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="service-worker.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
