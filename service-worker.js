@@ -12,7 +12,7 @@ const recousersToPrecache = [
   
   // referencia o service-worker
   self.addEventListener("install",  (event) => {
-    event.waitUtil(
+    event.waitUntil(
       caches.open(CachName).then(
         cache => (cache.addAll(recousersToPrecache))
         ),
